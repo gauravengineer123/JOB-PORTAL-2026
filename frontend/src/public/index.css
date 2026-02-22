@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-green: #7DCE13;
+    --bg-green: #28db09b0;
+    --blue-primary: #2563eb;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--primary-green);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .jp-root {
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 60%, #2563eb 100%);
+  }
+
+  .hero-woman-img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15)) contrast(1.1);
+    transform: scale(1.1);
+  }
+
+  .floating-card {
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+
+  .floating-card:hover {
+    transform: scale(1.05) !important;
+    z-index: 50;
+  }
+
+  .blob-circle {
+    width: 440px;
+    height: 410px;
+    background-color: var(--blue-primary);
+    opacity: 0.95;
+    z-index: 0;
+    filter: blur(45px);
+  }
+
+  .avatar-overlap {
+    margin-left: -0.5rem;
+  }
+
+  .nav-logo-circle {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.22);
+    backdrop-filter: blur(10px);
+  }
+
+  .jp-btn-primary {
+    background: #7DCE13;
+    color: #0b1220;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 14px;
+    transition: 0.2s ease;
+  }
+  
+  .jp-btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+  }
+
+  .jp-btn-secondary {
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: 0.2s ease;
+  }
+  
+  .jp-btn-secondary:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.18);
+  }
+}

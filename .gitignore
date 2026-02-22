@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# Build
+build/
+dist/
+
+# Environment
+.env
+.env.local
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.egg-info/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+coverage_html_report/
